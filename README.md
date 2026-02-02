@@ -39,10 +39,10 @@ This prototype is hosted as a Cloudflare Worker and uses Cloudflare platform pri
   - Chosen for fast iteration and deployment, and because it is the required hosting target.
 
 - D1 (SQLite database)
-  - Stores structured feedback items, incidents, and derived action items (or mock equivalents, depending on your current configuration).
+  - Stores structured feedback items, incidents, and derived action items.
   - Chosen because the data model is relational (feedback entries, categories, timestamps) and needs querying/sorting.
 
-- KV (Key-Value storage) or Durable Objects (if present in your project)
+- KV (Key-Value storage) or Durable Objects 
   - KV can be used for lightweight cached aggregates (e.g., precomputed summaries).
   - Durable Objects can be used for simple stateful coordination (e.g., status toggles) if implemented.
   - Chosen for fast reads and simple state/caching patterns.
